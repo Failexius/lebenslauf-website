@@ -1,0 +1,119 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #333333;
+    line-height: 1.5;
+    margin: 0;
+    padding: 20px;
+}
+
+header {
+    max-width: 1000px;
+    margin: 0 auto 20px auto;
+}
+
+.header-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.header-left {
+    flex: 1;
+    text-align: left;
+}
+
+.header-left h1 {
+    margin: 0;
+    font-size: 2.5rem;
+}
+
+.header-left h2 {
+    color: #208b98;
+    margin: 5px 0;
+    font-weight: normal;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 4px solid #208b98;
+    margin: 0 20px;
+}
+
+.header-right {
+    flex: 1;
+}
+
+.contact-info {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: right;
+    font-size: 14px;
+}
+
+.contact-info li {
+    margin-bottom: 5px;
+}
+
+.intro-text {
+    text-align: left;
+    margin-top: 20px;
+    padding-bottom: 20px;
+}
+
+.content-wrapper {
+    display: flex;
+    gap: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+    border-top: 2px solid #000000;
+    padding-top: 30px;
+}
+
+main {
+    flex: 7;
+}
+
+aside {
+    flex: 3;
+}
+
+main h2, aside h2 {
+    color: #000000;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    font-size: 1.2rem;
+}
+
+.skills-list {
+    list-style-type: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.skills-list li {
+    background-color: #a8b2b6;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+article {
+    margin-bottom: 25px;
+}
+
+h3 {
+    margin-bottom: 5px;
+    font-size: 1.1rem;
+}
+
+p {
+    margin: 5px 0;
+}
