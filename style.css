@@ -58,7 +58,19 @@ header {
 .contact-info li {
     margin-bottom: 5px;
 }
-
+.contact-info i {
+    margin-right: 10px;
+    color: #208b98;
+    width: 20px;
+    text-align: center;
+}
+.contact-info a {
+    color: inherit;         /* Erbt die Farbe vom Text drumherum */
+    text-decoration: none;  /* Entfernt den Unterstrich */
+}
+.contact-info a:hover {
+    color: #208b98;         /* Wird türkis, wenn man mit der Maus drüberfährt – ein toller Effekt! */
+}
 .intro-text {
     text-align: left;
     margin-top: 20px;
@@ -116,4 +128,27 @@ h3 {
 
 p {
     margin: 5px 0;
+}
+.language-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.rating {
+    display: flex;
+    gap: 5px;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    background-color: #e0e0e0;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.dot.filled {
+    background-color: #208b98;
 }
