@@ -16,4 +16,4 @@ Schau dir die fertige Website direkt hier an:
 
 ## Über dieses Projekt
 
-Dieses Projekt habe ich als angehender Wirtschaftsinformatiker und Junior Web Developer erstellt, um meine Kenntnisse in der modernen Frontend-Entwicklung (HTML & CSS) praxisnah anzuwenden und einen professionellen Web-Auftritt zu gestalten.
+Dieses Projekt habe ich als angehender Wirtschaftsinformatiker erstellt, um mein technisches Fundament aus der Systemtechnik mit modernen Web-Technologien zu verknüpfen. Es dient als zentrales Hub für meinen beruflichen Werdegang und zeigt die Schnittstelle zwischen IT-Infrastruktur und Software-Management.
