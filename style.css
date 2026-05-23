@@ -7,7 +7,6 @@ body {
     padding: 20px;
 }
 
-/* Wir umhüllen alles mit einem weißen "Blatt" */
 .main-container {
     background-color: white;
     max-width: 1000px;
@@ -164,10 +163,9 @@ p {
     background-color: #208b98;
 }
 
-/* Responsive Design für Handys */
 @media (max-width: 760px) {
     .header-top {
-        flex-direction: column; /* Name, Bild und Kontakte untereinander */
+        flex-direction: column;
         text-align: center;
     }
 
@@ -183,7 +181,7 @@ p {
     }
 
     .contact-info li {
-        justify-content: center; /* Zentriert Icons + Text auf dem Handy */
+        justify-content: center;
     }
 
     .profile-pic {
@@ -191,7 +189,7 @@ p {
     }
 
     .content-wrapper {
-        flex-direction: column; /* Hauptteil und Seitenleiste untereinander */
+        flex-direction: column;
         padding: 20px;
     }
 
@@ -201,5 +199,59 @@ p {
     
     .intro-text {
         text-align: center;
+    }
+}
+
+@media print {
+    * {
+        box-sizing: border-box !important;
+    }
+
+    @page {
+        size: A4;
+        margin: 15mm 15mm 25mm 15mm;
+    }
+    
+    body {
+        margin: 0;
+        padding: 0;
+        background-color: #ffffff;
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .main-container {
+        box-shadow: none !important;
+        border-radius: 0 !important;
+        padding: 0 !important;
+        margin: 0 !important;
+        max-width: none !important;
+        width: 100% !important;
+        background-color: #ffffff !important;
+    }
+
+    header, .content-wrapper {
+        max-width: none !important;
+        width: 100% !important;
+    }
+
+    .content-wrapper {
+        gap: 30px !important;
+    }
+
+    h2 {
+        margin-top: 18px !important;
+        margin-bottom: 8px !important;
+    }
+
+    article {
+        margin-bottom: 15px !important;
+        page-break-inside: avoid;
+        break-inside: avoid;
+    }
+
+    .skills-list, .contact-info, .language-item, aside {
+        page-break-inside: avoid;
+        break-inside: avoid;
     }
 }
