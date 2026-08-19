@@ -3,79 +3,60 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
     <title>Lebenslauf - Saidfiasal Khawarin</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
     />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <div class="main-container">
-      <header>
-        <div class="header-top">
-          <div class="header-left">
-            <h1>Saidfiasal Khawarin</h1>
-            <h2>Junior IT-Specialist & Wirtschaftsinformatik-Student</h2>
-          </div>
-
-          <img src="Profilbild.jpg" alt="Profilbild" class="profile-pic" />
-
-          <div class="header-right">
-            <ul class="contact-info">
-              <li>
-                <i class="fa-solid fa-envelope"></i>
-                <a href="mailto:saidfiasalkhawarin@gmail.com"
-                  >saidfiasalkhawarin@gmail.com</a
-                >
-              </li>
-              <li>
-                <i class="fa-solid fa-phone"></i>
-                <a href="tel:+4367762420012">+43 677 62420012</a>
-              </li>
-              <li><i class="fa-solid fa-location-dot"></i> Wien</li>
-              <li>
-                <i class="fa-brands fa-github"></i>
-                <a href="https://github.com/Failexius" target="_blank"
-                  >github.com/Failexius</a
-                >
-              </li>
-            </ul>
-          </div>
+    <div class="cv-container main-container">
+      <header class="profile-header">
+        <div class="profile-wrapper">
+          <img id="profile-img" src="profilbild_casual.jpg" alt="Profilbild Saidfiasal" class="profile-pic" />
+          <button id="mode-toggle-btn" onclick="toggleProfileImage()">Mode: Casual 🌴</button>
         </div>
 
-        <!-- 
-        Alter Text:
-        Angehender Wirtschaftsinformatiker (2. Semester) mit handfestem
-        IT-Fundament durch eine abgeschlossene Ausbildung als Systemtechniker
-        (LAP) und fundiertem Netzwerk-Wissen. Aktuell vertiefe ich mein
-        Verständnis für Software-Architektur und Objektorientierte
-        Programmierung (Java). Ich bin hoch motiviert, mein Wissen in der
-        modernen Webentwicklung einzusetzen, KI-gestützte Tools wie Claude
-        effektiv zu nutzen und als Junior Web Developer praxisnahe Lösungen zu
-        entwickeln. 
-        -->
+        <h1>Saidfiasal Khawarin</h1>
+        <div class="subtitle">Duales Studium Mobile Software Development | Junior Software Developer</div>
 
-        <p class="intro-text">
-          Angehender Wirtschaftsinformatiker im 2. Semester mit einem starken
-          technischen Fundament durch eine abgeschlossene Ausbildung als
-          Systemtechniker (LAP). Ich vereine tiefgehendes Netzwerk-Wissen (CCNA)
-          mit modernem Software-Verständnis (Java, SQL). Mein Fokus liegt auf
-          der Gestaltung und Optimierung komplexer IT-Infrastrukturen und
-          Prozesse, unterstützt durch den effizienten Einsatz von KI-gestützten
-          Tools.
+        <ul class="contact-info contacts-list">
+          <li class="contact-item">
+            <i class="fa-solid fa-envelope"></i>
+            <a href="mailto:saidfiasalkhawarin@gmail.com">saidfiasalkhawarin@gmail.com</a>
+          </li>
+          <li class="contact-item">
+            <i class="fa-solid fa-phone"></i>
+            <a href="tel:+4367762420012">+43 677 62420012</a>
+          </li>
+          <li class="contact-item">
+            <i class="fa-solid fa-location-dot"></i> Graz
+          </li>
+          <li class="contact-item">
+            <i class="fa-brands fa-github"></i>
+            <a href="https://github.com/Failexius" target="_blank">github.com/Failexius</a>
+          </li>
+        </ul>
+
+        <p class="profile-summary intro-text">
+          Angehender Mobile Software Developer mit starkem technischen Fundament durch eine abgeschlossene Lehre als IT-Systemtechniker (LAP). Ich verbinde tiefgehendes Wissen über Netzwerke und Systeminfrastrukturen mit moderner Softwareentwicklung (Java, Python, Mobile & Web). Mein Schwerpunkt liegt auf der Entwicklung performanter Anwendungen, sauberem Code und modernen DevOps-Workflows – vom Docker-Container bis zur CI/CD-Pipeline.
         </p>
       </header>
 
-      <div class="content-wrapper">
-        <main>
+      <div class="content-grid">
+        <main class="main-column">
           <section>
             <h2>Berufliche Erfahrung</h2>
 
-            <article>
+            <article class="job-item">
               <h3>IT-Support & Software-Einschulung</h3>
-              <p>MCW Wien | 04/2025</p>
+              <p class="meta-info">MCW Wien | 04/2025</p>
               <ul>
                 <li>Anwendersupport für spezialisierte Medizin-Software.</li>
                 <li>
@@ -89,9 +70,9 @@
               </ul>
             </article>
 
-            <article>
+            <article class="job-item">
               <h3>Präsenzdienst (Funktion: Schreiber)</h3>
-              <p>Österreichisches Bundesheer | 09/2024 - 03/2025</p>
+              <p class="meta-info">Österreichisches Bundesheer | 09/2024 – 03/2025</p>
               <ul>
                 <li>Administrative Unterstützung der Zugsführung.</li>
                 <li>
@@ -100,9 +81,9 @@
               </ul>
             </article>
 
-            <article>
+            <article class="job-item">
               <h3>Logistik-Mitarbeiter</h3>
-              <p>Amazon Partner | 05/2024 - 08/2024</p>
+              <p class="meta-info">Amazon Partner | 05/2024 – 08/2024</p>
               <ul>
                 <li>
                   Gewährleistung termingerechter Zustellungen in einem
@@ -111,87 +92,105 @@
               </ul>
             </article>
           </section>
+
           <section>
             <h2>Bildung</h2>
-            <article>
-              <h3>Bachelor Wirtschaftsinformatik (Aktuell 2. Semester)</h3>
-              <p>FH Technikum Wien</p>
-              <p>09/2025 - Gegenwart</p>
-              <p>Schwerpunkte:</p>
+            <article class="edu-item">
+              <h3>Mobile Software Development (BSc, Duales Studium)</h3>
+              <p class="meta-info">FH JOANNEUM | Start: 10/2026</p>
+              <p class="section-subtitle">Schwerpunkte:</p>
+              <ul>
+                <li>Mobile App Development (Android & iOS) | Mobile UX</li>
+                <li>Software Design, OOP & Continuous Delivery (CI/CD)</li>
+                <li>Web Services & Backend-Architekturen</li>
+                <li>Datenbankdesign & Netzwerktechnologien</li>
+              </ul>
+            </article>
+            <article class="edu-item">
+              <h3>Wirtschaftsinformatik (2 Semester absolviert)</h3>
+              <p class="meta-info">FH Technikum Wien | 09/2025 – 09/2026</p>
+              <p class="section-subtitle">Schwerpunkte:</p>
               <ul>
                 <li>Java (Grundlagen & OOP)</li>
                 <li>SQL-Datenbanken</li>
                 <li>Datenmanagement</li>
               </ul>
             </article>
-            <article>
-              <h3>
-                Lehrabschlussprüfung Informationstechnologie / Systemtechnik
-              </h3>
-              <p>WKO Steiermark</p>
-              <p>Abgeschlossen 02/2024</p>
+            <article class="edu-item">
+              <h3>Lehrabschlussprüfung IT-Systemtechnik</h3>
+              <p class="meta-info">WKO Steiermark | Abgeschlossen: 02/2024</p>
             </article>
-            <article>
+            <article class="edu-item">
               <h3>Matura (Schwerpunkt IT / Netzwerktechnik)</h3>
-              <p>BORG Monsbergergasse, Graz</p>
-              <p>09/2019 - 06/2024</p>
+              <p class="meta-info">BORG Monsbergergasse, Graz | 09/2019 – 06/2024</p>
+              <p class="vwa-note">Vorwissenschaftliche Arbeit: "Kryptowährungen - das Geld in der digitalen Welt"</p>
             </article>
           </section>
         </main>
 
-        <aside>
+        <aside class="sidebar-column">
           <section>
             <h2>Zertifikate & Skills</h2>
+            
             <h3>Zertifikate:</h3>
             <ul>
               <li>Cisco CCNAv7</li>
               <li>Certiport IT-Specialist: Databases</li>
               <li>MTA: Networking Fundamentals</li>
             </ul>
-            <h3>Technologien:</h3>
+
+            <h3>Entwicklung & Sprachen:</h3>
             <ul>
-              <li>Java</li>
-              <li>PHP</li>
-              <li>HTML & CSS</li>
-              <li>Datenbanken (SQL)</li>
-              <li>Netzwerktechnik & Systemadministration</li>
+              <li>Java (OOP, Clean Code)</li>
+              <li>Python & GDScript</li>
+              <li>Datenbanken (SQL, MySQL / MariaDB)</li>
+              <li>Web: HTML5, CSS3, JavaScript / PHP</li>
             </ul>
-            <h3>Infrastruktur:</h3>
+
+            <h3>DevOps, Tools & Infrastruktur:</h3>
             <ul>
-              <li>Netzwerktechnik</li>
-              <li>Systemadministration</li>
+              <li>Git & GitHub (Workflows, GitHub Actions)</li>
+              <li>Docker & Docker Compose</li>
+              <li>Linux / WSL, Systemadministration & Netzwerktechnik</li>
+              <li>IDEs: IntelliJ IDEA, VS Code, PyCharm</li>
             </ul>
-            <h3>Methodik:</h3>
+
+            <h3>Methoden & Sonstiges:</h3>
             <ul>
-              <li>KI-gestützte Entwicklung (Claude, GitHub Copilot)</li>
-              <li>Requirements Engineering</li>
-            </ul>
-            <h3>Sprachen:</h3>
-            <ul>
-              <li>Deutsch</li>
-              <li>Englisch</li>
+              <li>Agile Methoden & Requirements Engineering</li>
+              <li>KI-gestützte Entwicklung (GitHub Copilot, Claude)</li>
+              <li>Sprachen: Deutsch (Muttersprache), Englisch (Fließend)</li>
             </ul>
           </section>
+
           <section>
-            <h2>Interessen & Projekte</h2>
-            <h3>Persönliche Projekte:</h3>
-            <ul>
-              <li>
-                Entwicklung und Hosting eines dynamischen Web-Lebenslaufs via
-                GitHub Pages.
+            <h2>PROJEKTE & PORTFOLIO</h2>
+            <ul class="project-list">
+              <li class="project-item">
+                <strong>Game-Development (Godot Engine & GDScript)</strong><br>
+                Kollaborative Spielentwicklung im Team mit strukturiertem Git-Branching und Versionierung.
+              </li>
+              <li class="project-item">
+                <strong>Self-Hosted Server & Cloud-Infrastruktur</strong><br>
+                Setup eines containerisierten Docker-Compose-Stacks für Datenbanken, Monitoring und lokale Services.
+              </li>
+              <li class="project-item">
+                <strong>Web-Lebenslauf & Portfolio</strong><br>
+                Responsive Web-Präsenz gehostet via GitHub Pages.
               </li>
             </ul>
-            <h3>VWA:</h3>
-            <p>"Kryptowährungen - das Geld in der digitalen Welt"</p>
-            <h3>Interessen:</h3>
+
+            <h2>Interessen</h2>
             <ul>
-              <li>Smart-Home-Enthusiast (Heimvernetzung)</li>
-              <li>Infrastruktur-Simulationen (Cities: Skylines)</li>
-              <li>Hobbykoch</li>
+              <li>Smart-Home- & Netzwerk-Enthusiast</li>
+              <li>Infrastruktur- und Städtebausimulationen</li>
+              <li>Kochen & Kulinarik</li>
             </ul>
           </section>
         </aside>
       </div>
     </div>
+
+    <script src="script.js"></script>
   </body>
 </html>
