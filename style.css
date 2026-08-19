@@ -1,257 +1,283 @@
+:root {
+    --primary-color: #007acc;
+    --primary-dark: #005999;
+    --primary-light: #e6f3fa;
+    --text-color: #222222;
+    --text-muted: #666666;
+    --bg-page: #f4f6f8;
+    --bg-card: #ffffff;
+    --border-color: #eaeaea;
+}
+
+* {
+    box-sizing: border-box;
+}
+
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    color: #333333;
-    line-height: 1.6;
-    background-color: #f0f2f5;
     margin: 0;
-    padding: 20px;
+    padding: 0;
+    background-color: var(--bg-page);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--text-color);
+    line-height: 1.5;
 }
 
-.main-container {
-    background-color: white;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 40px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+.cv-container, .resume-container, .container, .main-container {
+    max-width: 920px;
+    margin: 40px auto;
+    padding: 50px; /* Mindestens 50px Innenabstand zu allen Seiten */
+    background: #ffffff;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
     border-radius: 8px;
+    box-sizing: border-box;
 }
 
-header {
-    max-width: 1000px;
-    margin: 0 auto 20px auto;
-}
-
-.header-top {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-}
-
-.header-left {
-    flex: 1;
-    text-align: left;
-}
-
-.header-left h1 {
-    margin: 0;
-    font-size: 2.5rem;
-}
-
-.header-left h2 {
-    color: #208b98;
-    margin: 5px 0;
-    font-weight: normal;
-}
-
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 50%;
-    border: 4px solid #208b98;
-    margin: 0 20px;
-}
-
-.header-right {
-    flex: 1;
-}
-
-.contact-info {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    text-align: right;
-    font-size: 14px;
-}
-
-.contact-info li {
-    margin-bottom: 5px;
-}
-.contact-info i {
-    margin-right: 10px;
-    color: #208b98;
-    width: 20px;
+/* Header Optimization (Kompakt & ausgewogen) */
+.profile-header {
     text-align: center;
-}
-.contact-info a {
-    color: inherit;
-    text-decoration: none;
-}
-.contact-info a:hover {
-    color: #208b98;
-}
-.intro-text {
-    text-align: left;
-    margin-top: 20px;
-    padding-bottom: 20px;
+    margin-bottom: 1.5rem;
 }
 
-.content-wrapper {
+.profile-header h1 {
+    font-size: 1.8rem;
+    margin: 0.4rem 0 0.2rem 0;
+    color: #111111;
+    font-weight: 800;
+}
+
+.profile-header .subtitle {
+    font-size: 1.05rem;
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+/* Profile Wrapper & Mode Toggle */
+.profile-wrapper {
     display: flex;
-    gap: 40px;
-    max-width: 1000px;
-    margin: 0 auto;
-    border-top: 2px solid #000000;
-    padding-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
 }
 
-main {
-    flex: 7;
+#profile-img, .profile-pic {
+    width: 105px;
+    height: 105px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--primary-color);
+    margin-bottom: 0.5rem;
+    box-shadow: 0 4px 12px rgba(0, 122, 204, 0.15);
+    transition: transform 0.3s ease;
 }
 
-aside {
-    flex: 3;
+#profile-img:hover {
+    transform: scale(1.03);
 }
 
-main h2, aside h2 {
-    color: #000000;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-    font-size: 1.2rem;
+#mode-toggle-btn {
+    margin-top: 4px;
+    margin-bottom: 8px;
+    padding: 5px 14px;
+    background-color: #ffffff;
+    color: var(--primary-color);
+    border: 1.5px solid var(--primary-color);
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
 }
 
-.skills-list {
-    list-style-type: none;
-    padding: 0;
+#mode-toggle-btn:hover {
+    background-color: var(--primary-color);
+    color: #ffffff;
+}
+
+/* Kontaktdaten kompakt nebeneinander */
+.contact-info, .contacts-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 0.8rem 1.6rem;
+    margin: 0.8rem 0;
+    font-size: 0.9rem;
+    list-style: none;
+    padding: 0;
 }
 
-.skills-list li {
-    background-color: #a8b2b6;
-    color: white;
-    padding: 5px 10px;
-    border-radius: 5px;
-    font-size: 14px;
+.contact-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: #333333;
 }
 
-article {
-    margin-bottom: 25px;
+.contact-item i {
+    color: var(--primary-color);
+}
+
+.contact-item a {
+    color: inherit;
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.contact-item a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
+}
+
+/* Profiltext */
+.profile-summary, .intro-text {
+    font-size: 0.92rem;
+    line-height: 1.5;
+    color: #333333;
+    border-left: 3px solid var(--primary-color);
+    padding-left: 1rem;
+    margin: 1.2rem 0 1.8rem 0;
+    text-align: left;
+}
+
+/* 2-Spalten Layout (Luftig & harmonisch) */
+.content-grid {
+    display: grid;
+    grid-template-columns: 1.35fr 1fr;
+    gap: 2.5rem;
+    align-items: start;
+}
+
+.main-column, .sidebar-column {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+}
+
+h2 {
+    font-size: 1.05rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #111111;
+    border-bottom: 1.5px solid #eaeaea;
+    padding-bottom: 0.35rem;
+    margin-bottom: 0.6rem;
+    margin-top: 0;
 }
 
 h3 {
-    margin-bottom: 5px;
-    font-size: 1.1rem;
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+    color: #111111;
+}
+
+article {
+    margin-bottom: 0.8rem;
 }
 
 p {
-    margin: 5px 0;
-}
-.language-item {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 10px;
+    margin: 3px 0;
 }
 
-.rating {
-    display: flex;
-    gap: 5px;
+.meta-info {
+    color: var(--text-muted);
+    font-weight: 600;
+    font-size: 0.86rem;
 }
 
-.dot {
-    width: 12px;
-    height: 12px;
-    background-color: #e0e0e0;
-    border-radius: 50%;
-    display: inline-block;
+.section-subtitle {
+    font-weight: 600;
+    margin-top: 4px;
+    font-size: 0.88rem;
+    color: #333333;
 }
 
-.dot.filled {
-    background-color: #208b98;
+.vwa-note {
+    font-style: italic;
+    color: var(--text-muted);
+    font-size: 0.84rem;
+    margin-top: 3px;
 }
 
-@media (max-width: 760px) {
-    .header-top {
-        flex-direction: column;
-        text-align: center;
-    }
-
-    .header-left, .header-right {
-        text-align: center;
-        flex: none;
-        width: 100%;
-    }
-
-    .contact-info {
-        text-align: center;
-        margin-top: 20px;
-    }
-
-    .contact-info li {
-        justify-content: center;
-    }
-
-    .profile-pic {
-        margin: 20px 0;
-    }
-
-    .content-wrapper {
-        flex-direction: column;
-        padding: 20px;
-    }
-
-    main, aside {
-        width: 100%;
-    }
-    
-    .intro-text {
-        text-align: center;
-    }
+ul {
+    padding-left: 1.2rem;
+    margin: 0.3rem 0;
 }
 
-@media print {
-    * {
-        box-sizing: border-box !important;
-    }
+li {
+    font-size: 0.88rem;
+    line-height: 1.45;
+    margin-bottom: 0.3rem;
+}
 
-    @page {
-        size: A4;
-        margin: 15mm 15mm 25mm 15mm;
-    }
-    
-    body {
+.sidebar-column section {
+    margin-bottom: 0.5rem;
+}
+
+.sidebar-column h3 {
+    color: var(--primary-dark);
+}
+
+.project-list {
+    list-style-type: none;
+    padding-left: 0 !important;
+}
+
+.project-item {
+    margin-bottom: 0.8rem;
+}
+
+/* Responsive Handling */
+@media (max-width: 768px) {
+    .cv-container, .resume-container, .container, .main-container {
         margin: 0;
-        padding: 0;
-        background-color: #ffffff;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+        padding: 24px 20px;
+        border-radius: 0;
     }
 
-    .main-container {
-        box-shadow: none !important;
-        border-radius: 0 !important;
-        padding: 0 !important;
-        margin: 0 !important;
-        max-width: none !important;
-        width: 100% !important;
-        background-color: #ffffff !important;
+    .content-grid {
+        grid-template-columns: 1fr;
+        gap: 1.8rem;
     }
+}
 
-    header, .content-wrapper {
-        max-width: none !important;
-        width: 100% !important;
-    }
+/* Print-Styles (@media print) – 50px Ränder auch im PDF */
+@media print {
+  @page {
+    size: A4;
+    margin: 1.5cm; /* Entspricht ca. 55px Rand auf Papier */
+  }
 
-    .content-wrapper {
-        gap: 30px !important;
-    }
+  body {
+    background: #ffffff !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
 
-    h2 {
-        margin-top: 18px !important;
-        margin-bottom: 8px !important;
-    }
+  .cv-container, .resume-container, .container, .main-container {
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important; /* Den Rand übernimmt @page */
+    box-shadow: none !important;
+    border-radius: 0 !important;
+  }
 
-    article {
-        margin-bottom: 15px !important;
-        page-break-inside: avoid;
-        break-inside: avoid;
-    }
+  #mode-toggle-btn, button, .no-print {
+    display: none !important;
+  }
 
-    .skills-list, .contact-info, .language-item, aside {
-        page-break-inside: avoid;
-        break-inside: avoid;
-    }
+  .content-grid {
+    display: grid !important;
+    grid-template-columns: 1.35fr 1fr !important;
+    gap: 2rem !important;
+  }
+
+  li {
+    margin-bottom: 0.2rem !important;
+    line-height: 1.35 !important;
+  }
 }
