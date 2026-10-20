@@ -256,6 +256,8 @@ li {
     background: #ffffff !important;
     padding: 0 !important;
     margin: 0 !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   .cv-container, .resume-container, .container, .main-container {
@@ -270,14 +272,40 @@ li {
     display: none !important;
   }
 
+  /* Statt Grid/Flex: Floats, die Chrome seitenübergreifend umbrechen kann */
   .content-grid {
-    display: grid !important;
-    grid-template-columns: 1.35fr 1fr !important;
-    gap: 2rem !important;
+    display: block !important;
   }
+  .content-grid::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  .main-column {
+    display: block !important;
+    float: left;
+    width: 57%;
+  }
+  .sidebar-column {
+    display: block !important;
+    float: right;
+    width: 38%;
+  }
+  .main-column > section {
+    break-inside: avoid;
+  }
+  .sidebar-column > section {
+    margin-bottom: 1.2rem;
+  }
+
+  /* Keine einzelnen Überschriften am Seitenende, keine zerrissenen Einträge */
+  h2, h3 { break-after: avoid; }
+  .job-item, .edu-item, .project-item { break-inside: avoid; }
 
   li {
     margin-bottom: 0.2rem !important;
     line-height: 1.35 !important;
   }
+  .sidebar-column ul { break-inside: avoid; }
+  .sidebar-column h3 { break-after: avoid; }
 }
