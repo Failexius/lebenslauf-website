@@ -5,12 +5,12 @@ new Image().src = 'profilbild_casual.jpg';
 function toggleProfileImage() {
   const img = document.getElementById('profile-img');
   const btn = document.getElementById('mode-toggle-btn');
-  if (img.getAttribute('src') === 'profilbild_casual.jpg') {
-    img.src = 'profilbild_business.jpg';
-    btn.textContent = 'Mode: Business 💼';
-  } else {
+  if (img.getAttribute('src').includes('business')) {
     img.src = 'profilbild_casual.jpg';
     btn.textContent = 'Mode: Casual 🌴';
+  } else {
+    img.src = 'profilbild_business.jpg';
+    btn.textContent = 'Mode: Business 💼';
   }
 }
 
