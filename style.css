@@ -426,17 +426,19 @@ li {
     }
 }
 
-/* Print-Styles (@media print) – 50px Ränder auch im PDF */
+/* Print-Styles (@media print) – optimiert auf exakt 2 Seiten */
 @media print {
   @page {
     size: A4;
-    margin: 1.5cm; /* Entspricht ca. 55px Rand auf Papier */
+    margin: 0.9cm 1.2cm;
   }
 
   body {
     background: #ffffff !important;
     padding: 0 !important;
     margin: 0 !important;
+    font-size: 0.81rem !important;
+    line-height: 1.28 !important;
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
   }
@@ -444,16 +446,50 @@ li {
   .cv-container, .resume-container, .container, .main-container {
     max-width: 100% !important;
     margin: 0 !important;
-    padding: 0 !important; /* Den Rand übernimmt @page */
+    padding: 0 !important;
     box-shadow: none !important;
     border-radius: 0 !important;
   }
 
-  #mode-toggle-btn, button, .no-print {
+  #mode-toggle-btn, button, .no-print, br {
     display: none !important;
   }
 
-  /* Statt Grid/Flex: Floats, die Chrome seitenübergreifend umbrechen kann */
+  /* Kompakter Header für den Druck */
+  .profile-header {
+    margin-bottom: 0.6rem !important;
+  }
+
+  #profile-img, .profile-pic {
+    width: 76px !important;
+    height: 76px !important;
+    margin-bottom: 0.2rem !important;
+  }
+
+  .profile-header h1 {
+    font-size: 1.45rem !important;
+    margin: 0.15rem 0 0.1rem 0 !important;
+  }
+
+  .profile-header .subtitle {
+    font-size: 0.9rem !important;
+    margin-bottom: 0.35rem !important;
+  }
+
+  .contact-info, .contacts-list {
+    margin: 0.25rem 0 0.45rem 0 !important;
+    gap: 0.3rem 1.1rem !important;
+    font-size: 0.78rem !important;
+  }
+
+  .profile-summary, .intro-text {
+    font-size: 0.80rem !important;
+    line-height: 1.32 !important;
+    margin: 0.35rem 0 0.65rem 0 !important;
+    padding-left: 0.75rem !important;
+  }
+
+  /* 2-Spalten-Floats für sauberen Seitenumbruch */
   .content-grid {
     display: block !important;
   }
@@ -472,21 +508,76 @@ li {
     float: right;
     width: 38%;
   }
+
   .main-column > section {
-    break-inside: avoid;
+    margin-bottom: 0.65rem !important;
+    break-inside: auto !important;
   }
-  .sidebar-column > section {
-    margin-bottom: 1.2rem;
+  .sidebar-section {
+    margin-bottom: 0.65rem !important;
   }
 
-  /* Keine einzelnen Überschriften am Seitenende, keine zerrissenen Einträge */
-  h2, h3 { break-after: avoid; }
-  .job-item, .edu-item, .project-item { break-inside: avoid; }
+  /* Keine einzelnen Überschriften am Seitenende, keine getrennten Boxen */
+  h2, h3 {
+    break-after: avoid !important;
+    page-break-after: avoid !important;
+  }
+  h2 {
+    font-size: 0.92rem !important;
+    margin-top: 0.45rem !important;
+    margin-bottom: 0.25rem !important;
+    padding-bottom: 0.15rem !important;
+  }
+  h3 {
+    font-size: 0.84rem !important;
+    margin-top: 0.3rem !important;
+    margin-bottom: 0.15rem !important;
+  }
+  
+  .meta-info {
+    font-size: 0.78rem !important;
+  }
+
+  .section-subtitle {
+    font-size: 0.78rem !important;
+    margin-top: 2px !important;
+  }
+
+  p {
+    margin: 2px 0 !important;
+  }
+
+  ul {
+    margin: 0.15rem 0 0.35rem 0 !important;
+    padding-left: 1.05rem !important;
+  }
 
   li {
-    margin-bottom: 0.2rem !important;
-    line-height: 1.35 !important;
+    font-size: 0.78rem !important;
+    line-height: 1.25 !important;
+    margin-bottom: 0.12rem !important;
   }
-  .sidebar-column ul { break-inside: avoid; }
-  .sidebar-column h3 { break-after: avoid; }
+
+  .job-item, .edu-item {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
+    margin-bottom: 0.45rem !important;
+  }
+
+  .project-item {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
+    margin-bottom: 0.45rem !important;
+    font-size: 0.78rem !important;
+    line-height: 1.25 !important;
+  }
+
+  .sidebar-group {
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    -webkit-column-break-inside: avoid !important;
+    margin-bottom: 0.35rem !important;
+  }
 }
