@@ -1,53 +1,36 @@
-# Mein digitaler Lebenslauf
+# Digitaler Lebenslauf
 
-Willkommen in meinem Repository! Hier liegt der Quellcode für meinen modernen, interaktiven und druckoptimierten digitalen Lebenslauf, den ich von Grund auf neu entwickelt habe.
-
-## 🌐 Live-Ansicht
-
-Die fertige Website ist direkt über GitHub Pages erreichbar:  
-👉 **[Lebenslauf von Saidfiasal Khawarin](https://failexius.github.io/lebenslauf-website/)**
+Quellcode für den interaktiven, responsiven und druckoptimierten Web-Lebenslauf von Saidfiasal Khawarin.
 
 ---
 
-## 📌 Über dieses Projekt
+## Live-Version
 
-Dieses Projekt dient als zentrale Web-Präsenz für meinen beruflichen Werdegang als **Junior Software Developer** mit Fokus auf **Mobile Software Development** (Duales Studium an der FH JOANNEUM). Aufbauend auf meinem technischen Fundament aus der Lehre als IT-Systemtechniker (LAP) und der Matura mit Schwerpunkt Netzwerktechnik verbindet die Seite moderne Web-Standards, responsives Layout und druckfertige A4-Optimierung.
-
----
-
-## ✨ Features & Besonderheiten
-
-- **🔄 Profilbild-Modus (Casual 🌴 / Business 💼):**
-  - Interaktives Umschalten des Profilbilds per Button auf der Website (`script.js`).
-  - Vorabladen (Preloading) beider Bilder für flüssiges Wechseln ohne Verzögerung.
-- **🖨️ Vollständig druck- & PDF-optimiert (`@media print`):**
-  - Beim Drucken bzw. PDF-Export (`beforeprint`) wird **automatisch das Business-Profilbild** aktiviert und anschließend wieder auf die vorherige Ansicht zurückgesetzt (`afterprint`).
-  - Maßgeschneidertes A4-Layout mit definierten Rändern (1,5 cm) und Vermeidung unschöner Seitenumbrüche (`break-inside: avoid; break-after: avoid;`).
-  - Interaktive Steuerelemente (wie der Foto-Modus-Button) werden im Ausdruck automatisch ausgeblendet.
-- **📱 Responsives 2-Spalten-Layout:**
-  - **Desktop:** Zweispaltige Ansicht mit CSS Grid – Hauptspalte für Erfahrung, Ausbildung & Projekte; Seitenleiste für Zertifikate, Skills & Interessen.
-  - **Mobile:** Nahtloser Übergang in ein optimiertes einspaltiges Layout für Smartphones und Tablets.
-- **⚡ Zero Dependencies / Vanilla Web:**
-  - Kein Build-Schritt, kein Node.js-Overhead: Reines semantisches HTML5, modernes CSS3 und Vanilla JavaScript.
-  - Extrem schlank, barrierearm und sofort einsatzbereit.
+Die Website wird über GitHub Pages bereitgestellt:
+[failexius.github.io/lebenslauf-website](https://failexius.github.io/lebenslauf-website/)
 
 ---
 
-## 🛠️ Verwendete Technologien
+## Technische Merkmale
 
-- **HTML5:** Semantischer Aufbau (`<header>`, `<main>`, `<aside>`, `<article>`, `<section>`).
-- **CSS3:** Custom Properties (CSS-Variablen), CSS Grid & Flexbox, Media Queries für Viewports sowie `@media print` für A4-Druck.
-- **Vanilla JavaScript (ES6):** Dynamischer Foto-Toggle und Event-Listener für Browser-Druckaktionen.
-- **Typografie & Icons:** Google Font (*Plus Jakarta Sans*) und Font Awesome 6 Icons.
+- **Profilbild-Umschaltung:** Dynamischer Wechsel zwischen Casual- und Business-Profilbild per JavaScript (`script.js`) inklusive Preloading beider Bildressourcen.
+- **Druck- und PDF-Optimierung (`@media print`):**
+  - Automatisches Umschalten auf das Business-Profilbild vor dem Druck (`beforeprint`) und Wiederherstellen des vorherigen Zustands nach dem Druck (`afterprint`).
+  - Festes A4-Seitenlayout mit 1,5 cm Seitenrändern und Vermeidung unvollständiger Umbrüche (`break-inside: avoid; break-after: avoid;`).
+  - Ausblenden interaktiver Steuerelemente im Druckmodus.
+- **Responsives Layout:**
+  - Desktop: Zweispaltiges CSS Grid (Hauptspalte für Werdegang, Ausbildung und Projekte; Seitenleiste für Skills, Zertifikate und Kontaktdaten).
+  - Mobile: Einspaltiges Flusslayout für kompakte Bildschirme.
+- **Zero Dependencies:** Reines HTML5, CSS3 und Vanilla JavaScript (ES6) ohne externe Build-Tools oder Node.js-Abhängigkeiten. Externe Ressourcen beschränken sich auf die Schriftart *Plus Jakarta Sans* und Font Awesome 6 Icons.
 
 ---
 
-## 📂 Projektstruktur
+## Projektstruktur
 
 ```text
 lebenslauf-website/
-├── index.html                 # Semantische Struktur und Inhalte des Lebenslaufs
-├── style.css                  # Modernes Stylesheet inkl. Responsive- & Print-Styles
+├── index.html                 # Semantischer Aufbau und Inhalte
+├── style.css                  # Stylesheet mit CSS Grid, Flexbox und @media print
 ├── script.js                  # Bild-Toggle-Logik und Print-Event-Handling
 ├── profilbild_business.jpg    # Business-Profilfoto
 ├── profilbild_casual.jpg      # Casual-Profilfoto
@@ -57,9 +40,7 @@ lebenslauf-website/
 
 ---
 
-## 🚀 Lokale Vorschau
-
-Da das Projekt ohne Build-Tools auskommt, kann die Seite direkt lokal betrachtet werden:
+## Lokale Ausführung
 
 1. Repository klonen:
    ```bash
@@ -67,18 +48,17 @@ Da das Projekt ohne Build-Tools auskommt, kann die Seite direkt lokal betrachtet
    cd lebenslauf-website
    ```
 
-2. Entweder `index.html` direkt im Browser öffnen, oder einen einfachen lokalen Server starten:
+2. Datei `index.html` direkt im Browser öffnen oder einen lokalen Webserver starten:
    ```bash
-   # Mit Python 3
    python3 -m http.server 8000
    ```
-   Anschließend im Browser auf `http://localhost:8000` aufrufen.
+   Anschließend im Browser `http://localhost:8000` aufrufen.
 
 ---
 
-## 📬 Kontakt
+## Kontakt
 
 - **Name:** Saidfiasal Khawarin
 - **Standort:** Graz, Österreich
-- **GitHub:** [@Failexius](https://github.com/Failexius)
-- **E-Mail:** [saidfiasalkhawarin@gmail.com](mailto:saidfiasalkhawarin@gmail.com)
+- **GitHub:** [Failexius](https://github.com/Failexius)
+- **E-Mail:** saidfiasalkhawarin@gmail.com
