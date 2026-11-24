@@ -234,10 +234,6 @@ li {
     margin-bottom: 0.5rem;
 }
 
-.sidebar-column h3 {
-    color: var(--primary-dark);
-}
-
 .project-list {
     list-style-type: none;
     padding-left: 0 !important;
