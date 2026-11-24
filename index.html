@@ -18,13 +18,18 @@
 <body>
   <div class="cv-container main-container">
     <header class="profile-header">
+      <select id="lang-select" class="no-print" aria-label="Sprache / Language">
+        <option value="de">DE</option>
+        <option value="en">EN</option>
+      </select>
+
       <div class="profile-wrapper">
         <img id="profile-img" src="profilbild_business.jpg" alt="Profilbild Saidfiasal" class="profile-pic" />
-        <button id="mode-toggle-btn" onclick="toggleProfileImage()">Mode: Business 💼</button>
+        <button id="mode-toggle-btn" onclick="toggleProfileImage()">Mode: Business</button>
       </div>
 
       <h1>Saidfiasal Khawarin</h1>
-      <div class="subtitle">Duales Studium Mobile Software Development | Junior Software Developer</div>
+      <div class="subtitle" data-i18n="header.subtitle">Duales Studium Mobile Software Development | Junior Software Developer</div>
 
       <ul class="contact-info contacts-list">
         <li class="contact-item">
@@ -44,7 +49,7 @@
         </li>
       </ul>
 
-      <p class="profile-summary intro-text">
+      <p class="profile-summary intro-text" data-i18n="header.summary">
         Angehender Mobile Software Developer mit technischem Fundament aus der Lehre als IT-Systemtechniker (LAP) und
         der Matura in Netzwerktechnik. Ich verbinde fundierte Kenntnisse in Netzwerken und Systeminfrastruktur mit
         Softwareentwicklung in Java, Python und Web-Technologien und baue meine Mobile-Erfahrung im dualen Studium aus.
@@ -54,33 +59,33 @@
     <div class="content-grid">
       <main class="main-column">
         <section>
-          <h2>Berufliche Erfahrung</h2>
+          <h2 data-i18n="section.experience">Berufliche Erfahrung</h2>
 
           <article class="job-item">
-            <h3>IT-Support (Innen- & Außendienst)</h3>
-            <p class="meta-info">MCW Wien | 04/2025</p>
+            <h3 data-i18n="job.mcw.title">IT-Support (Innen- & Außendienst)</h3>
+            <p class="meta-info" data-i18n="job.mcw.meta">MCW Wien | 04/2025</p>
             <ul>
-              <li>Telefonischer 1st-Level-Support, Ticketmanagement und Fernwartung via AnyDesk & TeamViewer.</li>
-              <li>Vor-Ort-Service bei Kunden (Wien & Umland): Einrichtung, Austausch und Entstörung von PC-Arbeitsplätzen.</li>
+              <li data-i18n="job.mcw.li1">Telefonischer 1st-Level-Support, Ticketmanagement und Fernwartung via AnyDesk & TeamViewer.</li>
+              <li data-i18n="job.mcw.li2">Vor-Ort-Service bei Kunden (Wien & Umland): Einrichtung, Austausch und Entstörung von PC-Arbeitsplätzen.</li>
             </ul>
           </article>
 
           <article class="job-item">
-            <h3>Präsenzdienst (Funktion: Schreiber)</h3>
-            <p class="meta-info">Österreichisches Bundesheer | 09/2024 – 03/2025</p>
+            <h3 data-i18n="job.bundesheer.title">Präsenzdienst (Funktion: Schreiber)</h3>
+            <p class="meta-info" data-i18n="job.bundesheer.meta">Österreichisches Bundesheer | 09/2024 – 03/2025</p>
             <ul>
-              <li>Administrative Unterstützung der Zugsführung.</li>
-              <li>
+              <li data-i18n="job.bundesheer.li1">Administrative Unterstützung der Zugsführung.</li>
+              <li data-i18n="job.bundesheer.li2">
                 Datenverwaltung und Organisation des täglichen Dienstbetriebs.
               </li>
             </ul>
           </article>
 
           <article class="job-item">
-            <h3>Logistik-Mitarbeiter</h3>
+            <h3 data-i18n="job.amazon.title">Logistik-Mitarbeiter</h3>
             <p class="meta-info">Amazon Partner | 05/2024 – 08/2024</p>
             <ul>
-              <li>
+              <li data-i18n="job.amazon.li1">
                 Gewährleistung termingerechter Zustellungen in einem
                 dynamischen Umfeld.
               </li>
@@ -89,57 +94,57 @@
         </section>
 
         <section>
-          <h2>Bildung</h2>
+          <h2 data-i18n="section.education">Bildung</h2>
           <article class="edu-item">
-            <h3>Mobile Software Development (BSc, Duales Studium)</h3>
+            <h3 data-i18n="edu.fhj.title">Mobile Software Development (BSc, Duales Studium)</h3>
             <p class="meta-info">FH JOANNEUM | Start: 09/2026</p>
-            <p class="section-subtitle">Schwerpunkte:</p>
+            <p class="section-subtitle" data-i18n="edu.fhj.subtitle">Schwerpunkte:</p>
             <ul>
               <li>Native Mobile App Development (Android & iOS) | Mobile UX & Usability</li>
               <li>Software Design, Clean Code & Continuous Delivery (CI/CD)</li>
-              <li>Web Engineering, RESTful APIs & Backend-Architekturen</li>
-              <li>IT-Security, System-Automatisierung & Datenbankdesign</li>
+              <li data-i18n="edu.fhj.li3">Web Engineering, RESTful APIs & Backend-Architekturen</li>
+              <li data-i18n="edu.fhj.li4">IT-Security, System-Automatisierung & Datenbankdesign</li>
             </ul>
           </article>
           <article class="edu-item">
-            <h3>Wirtschaftsinformatik (2 Semester / 60 ECTS absolviert)</h3>
+            <h3 data-i18n="edu.technikum.title">Wirtschaftsinformatik (2 Semester / 60 ECTS absolviert)</h3>
             <p class="meta-info">FH Technikum Wien | 09/2025 – 09/2026</p>
-            <p class="section-subtitle">Schwerpunkte (vollständiges 1. Studienjahr):</p>
+            <p class="section-subtitle" data-i18n="edu.technikum.subtitle">Schwerpunkte (vollständiges 1. Studienjahr):</p>
             <ul>
-              <li>Softwareentwicklung & Modellierung: Strukturierte & objektorientierte Programmierung (Java), UML</li>
-              <li>Datenmanagement & Datenbanken: Relationaler Datenbankentwurf & SQL</li>
-              <li>IT-Infrastruktur & Agile Methoden: Rechnernetze, Systeme & Software Lifecycle Tooling</li>
-              <li>Wirtschaft & Management: BWL, Rechnungswesen, IT-Projektmanagement & Wirtschaftsrecht</li>
+              <li data-i18n="edu.technikum.li1">Softwareentwicklung & Modellierung: Strukturierte & objektorientierte Programmierung (Java), UML</li>
+              <li data-i18n="edu.technikum.li2">Datenmanagement & Datenbanken: Relationaler Datenbankentwurf & SQL</li>
+              <li data-i18n="edu.technikum.li3">IT-Infrastruktur & Agile Methoden: Rechnernetze, Systeme & Software Lifecycle Tooling</li>
+              <li data-i18n="edu.technikum.li4">Wirtschaft & Management: BWL, Rechnungswesen, IT-Projektmanagement & Wirtschaftsrecht</li>
             </ul>
           </article>
           <article class="edu-item">
-            <h3>Lehrabschlussprüfung IT-Systemtechnik</h3>
-            <p class="meta-info">WKO Steiermark | Abgeschlossen: 02/2024</p>
+            <h3 data-i18n="edu.lap.title">Lehrabschlussprüfung IT-Systemtechnik</h3>
+            <p class="meta-info" data-i18n="edu.lap.meta">WKO Steiermark | Abgeschlossen: 02/2024</p>
           </article>
           <article class="edu-item">
-            <h3>Matura (Schwerpunkt IT / Netzwerktechnik)</h3>
+            <h3 data-i18n="edu.matura.title">Matura (Schwerpunkt IT / Netzwerktechnik)</h3>
             <p class="meta-info">BORG Monsbergergasse, Graz | 09/2019 – 06/2024</p>
-            <p class="vwa-note">Vorwissenschaftliche Arbeit: "Kryptowährungen - das Geld in der digitalen Welt"</p>
+            <p class="vwa-note" data-i18n="edu.matura.vwa">Vorwissenschaftliche Arbeit: "Kryptowährungen - das Geld in der digitalen Welt"</p>
           </article>
         </section>
 
         <section>
-          <h2>Projekte & Portfolio</h2>
+          <h2 data-i18n="section.projects">Projekte & Portfolio</h2>
           <ul class="project-list">
-            <li class="project-item">
+            <li class="project-item" data-i18n="proj.telemetry">
               <strong>Telemetry-System in Go (in Entwicklung, Lernprojekt)</strong><br>
               Eigenes Projekt, mit dem ich Server und Docker-Container überwache: Ein Agent sammelt Systemdaten (CPU,
               RAM, Speicher) und den Zustand der Container und sendet sie an einen zentralen Hub, der sie über eine
               REST-API bereitstellt. Dabei sammle ich erste Praxiserfahrung mit Go.
             </li>
-            <li class="project-item">
+            <li class="project-item" data-i18n="proj.homelab">
               <strong>Self-Hosted Homelab (Raspberry Pi & PC)</strong><br>
               Zwei-Knoten-Setup: Ein Raspberry Pi 3B+ überwacht rund um die Uhr (Vaultwarden, Uptime Kuma,
               Touchscreen-Dashboard mit Wake-on-LAN), ein PC (Windows 11 mit WSL2) betreibt über 20 Docker-Container,
               darunter Paperless-ngx, Immich, Ollama mit Open WebUI, n8n und Syncthing. Verbunden über Tailscale.
               Regelmäßige Updates mit vorherigen Datenbank-Backups.
             </li>
-            <li class="project-item">
+            <li class="project-item" data-i18n="proj.cv">
               <strong>Web-Lebenslauf & Portfolio</strong><br>
               Responsive Web-Präsenz gehostet via GitHub Pages.
             </li>
@@ -149,10 +154,10 @@
 
       <aside class="sidebar-column">
         <section class="sidebar-section">
-          <h2>Zertifikate & Skills</h2>
+          <h2 data-i18n="section.skills">Zertifikate & Skills</h2>
 
           <div class="sidebar-group">
-            <h3>Zertifikate:</h3>
+            <h3 data-i18n="skills.certs">Zertifikate:</h3>
             <ul>
               <li>Cisco CCNAv7</li>
               <li>Certiport IT-Specialist: Databases</li>
@@ -162,64 +167,65 @@
           </div>
 
           <div class="sidebar-group">
-            <h3>Entwicklung & Datenbanken:</h3>
+            <h3 data-i18n="skills.dev">Entwicklung & Datenbanken:</h3>
             <ul>
               <li>Java, Python, C#, Go</li>
-              <li>SQL (MySQL, MariaDB) & relationales Design</li>
+              <li data-i18n="skills.dev.sql">SQL (MySQL, MariaDB) & relationales Design</li>
               <li>Web: HTML5, CSS3, JavaScript / PHP</li>
             </ul>
           </div>
 
           <div class="sidebar-group">
-            <h3>DevOps, Systeme & Hardware:</h3>
+            <h3 data-i18n="skills.devops">DevOps, Systeme & Hardware:</h3>
             <ul>
-              <li>Docker & Docker Compose (Multi-Node-Stack mit >20 Containern)</li>
-              <li>Linux / WSL, Systemadministration & Netzwerke</li>
+              <li data-i18n="skills.devops.docker">Docker & Docker Compose (Multi-Node-Stack mit >20 Containern)</li>
+              <li data-i18n="skills.devops.linux">Linux / WSL, Systemadministration & Netzwerke</li>
               <li>Git & GitHub (Workflows, GitHub Actions)</li>
-              <li>Server-Infrastruktur & Subnet-Routing (Tailscale, WoL, Uptime Kuma)</li>
-              <li>Workflow-Automatisierung (n8n)</li>
-              <li>Hardware-Assembly, Custom-PC-Bau & Reparatur</li>
+              <li data-i18n="skills.devops.infra">Server-Infrastruktur & Subnet-Routing (Tailscale, WoL, Uptime Kuma)</li>
+              <li data-i18n="skills.devops.n8n">Workflow-Automatisierung (n8n)</li>
+              <li data-i18n="skills.devops.hardware">Hardware-Assembly, Custom-PC-Bau & Reparatur</li>
               <li>IDEs: IntelliJ IDEA, VS Code</li>
             </ul>
           </div>
 
           <div class="sidebar-group">
-            <h3>Methoden & KI:</h3>
+            <h3 data-i18n="skills.methods">Methoden & KI:</h3>
             <ul>
-              <li>Agile Methoden (Scrum) & Requirements Engineering</li>
-              <li>KI-gestützte Entwicklung (Antigravity, Claude)</li>
+              <li data-i18n="skills.methods.agile">Agile Methoden (Scrum) & Requirements Engineering</li>
+              <li data-i18n="skills.methods.ai">KI-gestützte Entwicklung (Antigravity, Claude)</li>
             </ul>
           </div>
         </section>
 
         <section class="sidebar-section sidebar-group">
-          <h2>Sprachen & Mobilität</h2>
+          <h2 data-i18n="section.languages">Sprachen & Mobilität</h2>
           <ul>
-            <li><strong>Deutsch:</strong> Muttersprache</li>
-            <li><strong>Englisch:</strong> Fließend (Technisches Englisch)</li>
-            <li><strong>Georgisch:</strong> Konversationssicher (B1 in Wort / Familiensprache)</li>
-            <li><strong>Französisch:</strong> Grundkenntnisse (A2 / alltagserprobt)</li>
-            <li><strong>Führerscheine:</strong> Klasse B (seit 2021) & A2 (seit 2025) – eigener PKW vorhanden</li>
+            <li data-i18n="lang.de"><strong>Deutsch:</strong> Muttersprache</li>
+            <li data-i18n="lang.en"><strong>Englisch:</strong> Fließend (Technisches Englisch)</li>
+            <li data-i18n="lang.ka"><strong>Georgisch:</strong> Konversationssicher (B1 in Wort / Familiensprache)</li>
+            <li data-i18n="lang.fr"><strong>Französisch:</strong> Grundkenntnisse (A2 / alltagserprobt)</li>
+            <li data-i18n="lang.license"><strong>Führerscheine:</strong> Klasse B (seit 2021) & A2 (seit 2025) – eigener PKW vorhanden</li>
           </ul>
         </section>
 
         <section class="sidebar-section sidebar-group">
-          <h2>Interessen</h2>
+          <h2 data-i18n="section.interests">Interessen</h2>
           <ul>
-            <li><strong>Simulationen & Gaming:</strong> Cities: Skylines II (Städtebau- & Logiksimulation), narrative Story-Games</li>
-            <li><strong>Homelab & Self-Hosting:</strong> Asymmetrischer 24/7-Server-Stack (Raspberry Pi & WoL-Compute-Node)</li>
-            <li><strong>Kulinarik:</strong> Zubereitung traditioneller georgischer Gerichte (Khinkali, Khachapuri)</li>
-            <li><strong>Freizeit & Sport:</strong> Motorradfahren (Klasse A2), Kraftsport</li>
+            <li data-i18n="interest.gaming"><strong>Simulationen & Gaming:</strong> Cities: Skylines II (Städtebau- & Logiksimulation), narrative Story-Games</li>
+            <li data-i18n="interest.homelab"><strong>Homelab & Self-Hosting:</strong> Asymmetrischer 24/7-Server-Stack (Raspberry Pi & WoL-Compute-Node)</li>
+            <li data-i18n="interest.food"><strong>Kulinarik:</strong> Zubereitung traditioneller georgischer Gerichte (Khinkali, Khachapuri)</li>
+            <li data-i18n="interest.sport"><strong>Freizeit & Sport:</strong> Motorradfahren (Klasse A2), Kraftsport</li>
           </ul>
         </section>
       </aside>
     </div>
 
     <footer class="cv-footer no-print">
-      <p>© 2026 Saidfiasal Khawarin • <a href="legal.html">Impressum &amp; Datenschutz</a></p>
+      <p>© 2026 Saidfiasal Khawarin • <a href="legal.html" data-i18n="footer.legal">Impressum &amp; Datenschutz</a></p>
     </footer>
   </div>
 
+  <script src="translations.js"></script>
   <script src="script.js"></script>
 </body>
 

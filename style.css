@@ -36,6 +36,7 @@ body {
 .profile-header {
     text-align: center;
     margin-bottom: 1.5rem;
+    position: relative;
 }
 
 .profile-header h1 {
@@ -94,6 +95,21 @@ body {
 #mode-toggle-btn:hover {
     background-color: var(--primary-color);
     color: #ffffff;
+}
+
+#lang-select {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 4px 10px;
+    background-color: #ffffff;
+    color: var(--primary-color);
+    border: 1.5px solid var(--primary-color);
+    border-radius: 20px;
+    font-family: inherit;
+    font-size: 0.8rem;
+    font-weight: 600;
+    cursor: pointer;
 }
 
 /* Kontaktdaten kompakt nebeneinander */
@@ -216,10 +232,6 @@ li {
 
 .sidebar-column section {
     margin-bottom: 0.5rem;
-}
-
-.sidebar-column h3 {
-    color: var(--primary-dark);
 }
 
 .project-list {
